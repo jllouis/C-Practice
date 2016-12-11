@@ -18,7 +18,6 @@ int main(int argc, char **argv)
 
         char *end; // to make strtol happy
         putc(strtol(input, &end, 2), stdout);
-        fflush(stdout);
 
         argv[1] += 8;
         char *newargv[2] = {"recursiveMain", argv[1]}; // new argv for main call; bin sequence w/o already printed chars
